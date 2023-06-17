@@ -5,7 +5,9 @@ describe('Game2', function () {
   async function deployContractAndSetVariables() {
     const Game = await ethers.getContractFactory('Game2');
     const game = await Game.deploy();
-
+    await game.switchOn(20);
+    await game.switchOn(47);
+    await game.switchOn(212);
     return { game };
   }
 
